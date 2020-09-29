@@ -1,10 +1,11 @@
-const User = require('../models/user');
+const { admin } = require('../models');
 
 const resetDatabase = async () => {
   try {
-    await User.deleteMany();
+    await admin.deleteMany();
   } catch (err) {
-    console.log('Error In Create Reset Database', err);
+    // eslint-disable-next-line no-console
+    console.log('database resting Error', err);
     throw err;
   }
 };

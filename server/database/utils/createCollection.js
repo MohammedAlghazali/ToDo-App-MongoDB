@@ -1,10 +1,11 @@
-const User = require('../models/user');
+const { admin } = require('../models');
 
 const createEmptyCollection = async () => {
   try {
-    await User.createCollection();
+    await admin.createCollection();
   } catch (err) {
-    console.log('Error In Create Collection', err);
+    // eslint-disable-next-line no-console
+    console.log('creating collection Error', err);
     throw err;
   }
 };
