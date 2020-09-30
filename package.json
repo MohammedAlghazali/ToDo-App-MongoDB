@@ -7,7 +7,7 @@
     "start": "NODE_ENV=production node server/index.js",
     "dev": "NODE_ENV=development nodemon server/index.js",
     "project-setup": "npm install && cd client && npm install",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "fakeDataBuild": "node server/database/index.js",
     "test": "NODE_ENV=test jest --no-cache --runInBand --coverage",
     "kill": "fuser -k 5000/tcp"
   },
