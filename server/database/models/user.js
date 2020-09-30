@@ -39,4 +39,6 @@ const userSchema = new Schema({
   todo: [todoSchema],
 });
 
-module.exports = mongoose.model('admin', userSchema);
+const User = mongoose.model('user', userSchema);
+
+module.exports = User;
