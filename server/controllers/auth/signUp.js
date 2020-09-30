@@ -26,8 +26,8 @@ const signUp = async (req, res, next) => {
     const userToken = { userId: _id };
     const cookie = sign(userToken, process.env.SECRET_KEY);
 
-    res.cookie('user', cookie);
-    res.json({ statusCode: 200, message: 'sign in successfully' });
+    res.cookie('token', cookie);
+    res.json({ message: 'sign in successfully' });
   } catch (err) {
     res.status(400).json({
       Error: err.errors || err,
