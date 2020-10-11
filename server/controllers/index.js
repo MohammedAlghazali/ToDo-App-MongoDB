@@ -1,4 +1,4 @@
-const { signUp, login, authorization } = require('./auth');
+const { signUp, login, authorization, logout } = require('./auth');
 const modifyUser = require('./modifyUser');
 
 module.exports = {
@@ -6,4 +6,5 @@ module.exports = {
   login,
   authorization,
   modifyUser,
+  logout,
 };
