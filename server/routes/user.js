@@ -1,4 +1,6 @@
 const router = require('express').Router();
+
+const todo = require('./todo');
 const {
   signUp,
   login,
@@ -11,6 +13,8 @@ router.post('/signUp', signUp);
 router.post('/login', login);
 
 router.use(authorization);
+
+router.use(todo);
 
 router.post('/logout', logout);
 router.get('/is-auth', (req, res) => {

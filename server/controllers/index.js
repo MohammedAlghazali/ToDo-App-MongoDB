@@ -1,5 +1,6 @@
 const { signUp, login, authorization, logout } = require('./auth');
 const modifyUser = require('./modifyUser');
+const addTodo = require('./addTodo');
 
 module.exports = {
   signUp,
@@ -7,4 +8,5 @@ module.exports = {
   authorization,
   modifyUser,
   logout,
+  addTodo,
 };
